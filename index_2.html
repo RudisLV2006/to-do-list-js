@@ -26,8 +26,9 @@
         const btnDelete = document.createElement("button");
         btnDelete.textContent = "Dzēst";
 
-        btnDelete.addEventListener("click", function (event) {
-          event.target.parentNode.remove();
+        btnDelete.addEventListener("click", function () {
+          list.remove(item);
+        //   event.target.parentNode.remove();
         });
 
         item.appendChild(btnDelete);
