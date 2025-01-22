@@ -19,7 +19,13 @@
       const list = document.querySelector("ul");
 
       btn.addEventListener("click", function () {
-        console.log("click");
+        let task = inputField.value;
+
+        const item = document.createElement("li");
+
+        item.textContent = task;
+
+        list.appendChild(item);
       });
     </script>
   </body>
