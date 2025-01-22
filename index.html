@@ -24,14 +24,12 @@
       destroy.value = "x";
 
       btn.addEventListener("click", function () {
+        if (inputField.value == "") return;
         const item = document.createElement("li");
+        item.innerHTML = inputField.value;
 
-        let task = inputField.value;
-        if (task.length > 0) {
-          item.innerHTML = task;
-
-          list.appendChild(item);
-        }
+        list.appendChild(item);
+        inputField.value = "";
       });
     </script>
   </body>
