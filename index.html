@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>My tasks</h1>
 
-    
-    <input type="text">
+    <input type="text" />
     <button>Add</button>
 
     <ul></ul>
 
     <script>
-        const btn = document.querySelector("button");
-        const inputField = document.querySelector("input");
-        const list = document.querySelector("ul");
+      const btn = document.querySelector("button");
+      const inputField = document.querySelector("input");
+      const list = document.querySelector("ul");
 
-        
+      btn.addEventListener("click", function () {
+        console.log("click");
+      });
     </script>
-</body>
+  </body>
 </html>
