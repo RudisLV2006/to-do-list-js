@@ -11,9 +11,7 @@
     <input type="text" />
     <button>Add</button>
 
-    <ul>
-      <li>sdds <span>sdsd</span></li>
-    </ul>
+    <ul></ul>
 
     <script>
       const btn = document.querySelector("button");
@@ -21,12 +19,12 @@
       const list = document.querySelector("ul");
 
       const destroy = document.createElement("span");
-      destroy.value = "x";
+      destroy.textContent = "x";
 
       btn.addEventListener("click", function () {
         if (inputField.value == "") return;
         const item = document.createElement("li");
-        item.innerHTML = inputField.value;
+        item.innerHTML = `${inputField.value} ${destroy.outerHTML}`;
 
         list.appendChild(item);
         inputField.value = "";
