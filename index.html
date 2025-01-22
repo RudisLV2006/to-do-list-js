@@ -18,16 +18,22 @@
       const inputField = document.querySelector("input");
       const list = document.querySelector("ul");
 
-      const destroy = document.createElement("span");
-      destroy.textContent = "x";
+      const destroy = document.createElement("button");
+      destroy.textContent = "Dzēst";
 
       btn.addEventListener("click", function () {
         if (inputField.value == "") return;
         const item = document.createElement("li");
-        item.innerHTML = `${inputField.value} ${destroy.outerHTML}`;
+        item.innerHTML = `${inputField.value} <button data-action = "delete"> Dzēst`;
 
         list.appendChild(item);
         inputField.value = "";
+      });
+
+      list.addEventListener("click", function (event) {
+        let element = event.target;
+        if (element.dataset.action !== "delete") return;
+        element.parentNode.remove();
       });
     </script>
   </body>
