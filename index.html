@@ -11,21 +11,27 @@
     <input type="text" />
     <button>Add</button>
 
-    <ul></ul>
+    <ul>
+      <li>sdds <span>sdsd</span></li>
+    </ul>
 
     <script>
       const btn = document.querySelector("button");
       const inputField = document.querySelector("input");
       const list = document.querySelector("ul");
 
-      btn.addEventListener("click", function () {
-        let task = inputField.value;
+      const destroy = document.createElement("span");
+      destroy.value = "x";
 
+      btn.addEventListener("click", function () {
         const item = document.createElement("li");
 
-        item.textContent = task;
+        let task = inputField.value;
+        if (task.length > 0) {
+          item.innerHTML = task;
 
-        list.appendChild(item);
+          list.appendChild(item);
+        }
       });
     </script>
   </body>
